@@ -174,7 +174,7 @@ fi
 
 # MRTRIX3
 SECONDS=0
-git clone https://github.com/MRtrix3/mrtrix3.git mrtrix3-src -b ${TAGNAME}
+git clone https://github.com/daljit46/mrtrix3.git mrtrix3-src -b ${TAGNAME}
 cd ${PREFIX}-src
 MRTRIX_VERSION=$(git describe --abbrev=8 | tr '-' '_')
 CFLAGS="${MACOS_UNIVERSAL_FLAGS} -I${PREFIX}/include" LINKFLAGS="${MACOS_UNIVERSAL_FLAGS} -L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib" TIFF_LINKFLAGS="-ltiff" PATH=${PREFIX}/bin:${PATH} ./configure
